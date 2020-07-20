@@ -1,5 +1,7 @@
 var helicopterIMG, helicopterSprite, packageSprite,packageIMG;
 var packageBody,ground
+var targetbox
+var world
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -14,6 +16,7 @@ function preload()
 function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
+	box1=new Box(200,200,100,10)
 	
 
 	packageSprite=createSprite(width/2, 80, 10,10);
@@ -47,6 +50,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
+  box1.display()
   background(0);
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
